@@ -7,14 +7,6 @@
   "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
   "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Pedido.hpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Pedido.hpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
  }, {
-  "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp",
-  "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
-  "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
- }, {
-  "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp",
-  "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
-  "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
- }, {
   "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Pedido.cpp",
   "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
   "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Pedido.cpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Pedido.cpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
@@ -54,6 +46,14 @@
   "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.cpp",
   "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
   "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.cpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.cpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp",
+  "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
+  "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Cola.hpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
+ }, {
+  "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp",
+  "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
+  "command": "C:/msys64/clang64/bin/g++.exe -c C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp -o C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.cpp.o -target x86_64-w64-windows-gnu -IC:\\msys64\\clang64\\include\\c++\\v1 -IC:\\msys64\\clang64\\lib\\clang\\16\\include -IC:\\msys64\\clang64\\include -I. -I.  -gdwarf-2  -O0  -Wall"
  }, {
   "file": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio\\Gestor.hpp",
   "directory": "C:\\Users\\rodri\\Documents\\GitHub\\PECL\\PECLQuispeAntezanaRodrigoMauricio\\PECLQuispeAntezanaRodrigoMauricio",
