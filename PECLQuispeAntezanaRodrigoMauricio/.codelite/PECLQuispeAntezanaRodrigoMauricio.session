@@ -6,6 +6,13 @@
     <TabInfo>
       <wxString Value="C:\Users\rodri\Documents\GitHub\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="5" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Documents\GitHub\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\NodoCola.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
