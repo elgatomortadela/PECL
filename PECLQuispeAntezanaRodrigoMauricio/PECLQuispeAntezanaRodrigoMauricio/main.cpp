@@ -16,7 +16,7 @@ int main(int argc, char **argv)
              << gestor.PedidosEnSalaB() << "\tSala C-> " <<  gestor.PedidosEnSalaC() << "\tSala D-> "
              << gestor.PedidosEnSalaD()
              << " \n\tPedidos en las listas:\n \t\tEstandar-> "
-             << 0 /*gestor.PedidosEnListaEstandar()*/ << "\tUrgentes-> " << 0 /*gestor.PedidosEnListaUrgentes()*/
+             << gestor.PedidosEnListaEstandar() << "\tUrgentes-> " << gestor.PedidosEnListaUrgentes()
              << "\n\tPedidos en el arbol -> " << 0                            /*gestor.PedidosEnArbol()*/
              << "\n";
         cout << "\t----------------------------------------------------------------"
@@ -87,7 +87,7 @@ int main(int argc, char **argv)
              gestor.borraPedidosColas();
             break;
         case 'H':
-            // gestor.enlistarPedidos();
+            gestor.enlistarPedidos();
             break;
         case 'I':
             // gestor.muestraPedidosEstandar();
@@ -99,7 +99,7 @@ int main(int argc, char **argv)
             // gestor.buscarPedidos();
             break;
         case 'L':
-            // gestor.reiniciar();
+            gestor.reiniciar();
             break;
         case 'M':
             //...;

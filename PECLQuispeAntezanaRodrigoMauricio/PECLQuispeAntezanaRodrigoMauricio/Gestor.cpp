@@ -1,4 +1,8 @@
 #include "Gestor.hpp"
+#include <cstdlib>
+#include <iostream>
+#include <iomanip>
+#include <list>
 
 Gestor::Gestor()
 {
@@ -9,6 +13,8 @@ Cola colaA; //Cola para estandar
 Cola colaB;//Cola para estandar
 Cola colaC;//Cola para urgente
 Cola colaD;//Cola para urgente
+Lista listaUrgente;
+Lista listaEstandar;
 
 
 void Gestor::genera12Pedidos()
@@ -100,6 +106,44 @@ void Gestor::borraPedidosColas()
     while(colaD.getLongitud() >0) {
         colaD.eliminar();
     }
+}
+void Gestor::enlistarPedidos()
+{
+    list <Pedido> listaUrgente;
+    list <Pedido> listaEstandar;
+    while(colaA.getLongitud() > 0)
+    {
+      listaEstandar.push_back(colaA.verPrimero());
+      colaA.eliminar();
+    }
+    while(colaB.getLongitud() > 0)
+    {
+      listaEstandar.push_back(colaB.verPrimero());
+      colaB.eliminar();
+    }
+    while(colaC.getLongitud() > 0)
+    {
+      listaUrgente.push_back(colaC.verPrimero());
+      colaC.eliminar();
+    }
+    while(colaD.getLongitud() > 0)
+    {
+      listaUrgente.push_back(colaD.verPrimero());
+      colaD.eliminar();
+    }
+}
+int Gestor::PedidosEnListaEstandar()
+{
+    return listaEstandar.getLongitud();
+}
+int Gestor::PedidosEnListaUrgentes()
+{
+    return listaUrgente.getLongitud();
+}
+void Gestor::reiniciar()
+{
+    borraPedidosColas();
+    borraPedidosPila();
 }
 Gestor::~Gestor()
 {

@@ -26,6 +26,8 @@ private:
     friend class NodoCola;
     friend class Cola;
     friend class Gestor;
+    friend class Lista;
+    friend class NodoLista;
 
 };
 

@@ -5,6 +5,8 @@
 #include <Pila.hpp>
 #include <NodoCola.hpp>
 #include <Cola.hpp>
+#include <NodoLista.hpp>
+#include <Lista.hpp>
 #include <iostream>
 using namespace std;
 
@@ -20,11 +22,15 @@ public:
     int PedidosEnSalaA();
     int PedidosEnSalaB();
     int PedidosEnSalaC();
-    int PedidosEnSalaD();
+    int PedidosEnSalaD();;
+    int PedidosEnListaEstandar();
+    int PedidosEnListaUrgentes();
     void encolarPedidos();
     void muestraPedidosSalasAyB();
     void muestraPedidosSalasCyD();
     void borraPedidosColas();
+    void reiniciar();
+    void enlistarPedidos();
 
 };
 

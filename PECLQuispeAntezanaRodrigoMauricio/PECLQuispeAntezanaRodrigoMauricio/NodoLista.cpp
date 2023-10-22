@@ -1,7 +1,9 @@
 #include "NodoLista.hpp"
 
-NodoLista::NodoLista()
+NodoLista::NodoLista(Pedido p, NodoLista* sig)
 {
+    pedido = p;
+    siguiente = sig;
 }
 
 NodoLista::~NodoLista()
