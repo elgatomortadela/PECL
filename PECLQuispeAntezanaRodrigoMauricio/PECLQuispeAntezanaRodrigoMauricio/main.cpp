@@ -1,20 +1,20 @@
-//#iclude <Gestor.hpp>
+#include <Gestor.hpp>
 #include <stdio.h>
 #include <iostream>
 using namespace std;
 
 int main(int argc, char **argv)
 {
-    //Gestor gestor;
+    Gestor gestor;
     char opcion;
         do {
 
         cout << "\n\t--------------------------------------------------------------"
                 "--------\n";
-        cout << "\tPedidos en la pila -> " << 0 /*gestor.PedidosEnPila()*/
-             << "\n\tPedidos en las colas:\n \t\tSala A-> " << 0 /*gestor.PedidosEnSalaA() */ << "\tSala B-> "
-             << 0 /*gestor.PedidosEnSalaB() */ << "\tSala C-> " << 0 /*gestor.PedidosEnSalaC() */ << "\tSala D-> "
-             << 0 /*gestor.PedidosEnSalaD()*/
+        cout << "\tPedidos en la pila -> " << gestor.PedidosEnPila()
+             << "\n\tPedidos en las colas:\n \t\tSala A-> " << gestor.PedidosEnSalaA() << "\tSala B-> "
+             << gestor.PedidosEnSalaB() << "\tSala C-> " <<  gestor.PedidosEnSalaC() << "\tSala D-> "
+             << gestor.PedidosEnSalaD()
              << " \n\tPedidos en las listas:\n \t\tEstandar-> "
              << 0 /*gestor.PedidosEnListaEstandar()*/ << "\tUrgentes-> " << 0 /*gestor.PedidosEnListaUrgentes()*/
              << "\n\tPedidos en el arbol -> " << 0                            /*gestor.PedidosEnArbol()*/
@@ -66,25 +66,25 @@ int main(int argc, char **argv)
         switch(opcion) {
 
         case 'A':
-            // gestor.genera12Pedidos();
+            gestor.genera12Pedidos();
             break;
         case 'B':
-            // gestor.muestraPedidos();
+            gestor.muestraPedidos();
             break;
         case 'C':
-            // gestor.borraPedidosPila();
+             gestor.borraPedidosPila();
             break;
         case 'D':
-            // gestor.encolarPedidos();
+             gestor.encolarPedidos();
             break;
         case 'E':
-            // gestor.muestraPedidosSalasAyB();
+             gestor.muestraPedidosSalasAyB();
             break;
         case 'F':
-            // gestor.muestraPedidosSalasCyD();
+             gestor.muestraPedidosSalasCyD();
             break;
         case 'G':
-            // gestor.borraPedidosColas();
+             gestor.borraPedidosColas();
             break;
         case 'H':
             // gestor.enlistarPedidos();
