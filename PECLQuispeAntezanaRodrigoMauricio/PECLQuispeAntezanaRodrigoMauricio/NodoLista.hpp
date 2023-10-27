@@ -7,12 +7,13 @@ using namespace std;
 class NodoLista
 {
 public:
-    NodoLista(Pedido p, NodoLista* sig = NULL);
+    NodoLista(Pedido p, NodoLista* sig = NULL, NodoLista* ant=NULL);
     ~NodoLista();
 
 private:
     Pedido pedido;
     NodoLista* siguiente;
+    NodoLista* anterior;
     friend class Lista;
 
 };

@@ -38,7 +38,7 @@ void Pila::mostrar()
     pnodoPila aux = ultimo;
     cout <<" Los datos de los pedidos son:"<<endl;
     while(aux) {
-        cout <<" Es urgente:" << aux ->pedido.urgencia<<" DNI: " << aux->pedido.DNI<<" ID: "<<aux->pedido.id<<" Numero de seguimiento: "<<aux->pedido.numeroSeguimiento<<endl;
+        cout <<" Es urgente:" << aux ->pedido.urgencia<<" DNI: " << aux->pedido.DNI<</*" ID: "<<aux->pedido.id<<" Numero de seguimiento: "<<aux->pedido.numeroSeguimiento<<*/endl;
         aux = aux ->siguiente;
     }
     cout << endl;

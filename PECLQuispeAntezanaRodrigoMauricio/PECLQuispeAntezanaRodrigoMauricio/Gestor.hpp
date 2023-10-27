@@ -31,7 +31,9 @@ public:
     void borraPedidosColas();
     void reiniciar();
     void enlistarPedidos();
-
+    void muestraPedidosEstandar();
+    void muestraPedidosUrgentes();
+    string array_dni[48];
 };
 
 #endif // GESTOR_HPP

@@ -90,10 +90,10 @@ int main(int argc, char **argv)
             gestor.enlistarPedidos();
             break;
         case 'I':
-            // gestor.muestraPedidosEstandar();
+            gestor.muestraPedidosEstandar();
             break;
         case 'J':
-            // gestor.muestraPedidosUrgentes();
+            gestor.muestraPedidosUrgentes();
             break;
         case 'K':
             // gestor.buscarPedidos();

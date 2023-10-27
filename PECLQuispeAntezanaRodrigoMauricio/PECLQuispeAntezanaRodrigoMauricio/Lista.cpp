@@ -5,17 +5,28 @@ Lista::Lista()
     ultimo = NULL;
     longitud = 0;
 }
+
 void Lista::almacenar(Pedido p)
 {
-    pnodoLista nuevo;
-    nuevo = new NodoLista(p);
-    if(ultimo)
-        ultimo ->siguiente = nuevo;
-    ultimo = nuevo;
-    if(!primero)
+    pnodoLista nuevo = new NodoLista(p);
+
+    if (!primero || p.id <= primero->pedido.id) {
+        nuevo->siguiente = primero;
         primero = nuevo;
+    } else {
+        pnodoLista anterior = primero;
+        pnodoLista actual = primero->siguiente;
+
+        while (actual && p.id > actual->pedido.id) {
+            anterior = actual;
+            actual = actual->siguiente;
+        }
+
+        anterior->siguiente = nuevo;
+        nuevo->siguiente = actual;
+    }
+
     longitud++;
-    
 }
 void Lista::mostrar()
 {
@@ -27,12 +38,7 @@ void Lista::mostrar()
     }
     cout << endl;
 }
-/*
-Pedido Lista::ordenar()
-{
-    //1 --> prioridad estandar
-    //51 --> prioridad urgente
-}*/
+
 int Lista::getLongitud()
 {
     return this ->longitud;

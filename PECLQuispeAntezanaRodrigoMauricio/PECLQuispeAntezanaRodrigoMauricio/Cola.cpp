@@ -11,6 +11,7 @@ Cola::Cola()
 }
 void Cola::insertar(Pedido p)
 {
+    
     pnodoCola nuevo;
     nuevo = new NodoCola(p);
     if(ultimo)

@@ -16,7 +16,7 @@ void Pedido::mostrar()
     string tipo = "Estándar";
     if(urgencia)
         tipo = "Urgente";
-    cout<<"\t"<<setw(8)<<tipo<<" ID "<<id<<" numeroSeguimiento "<<numeroSeguimiento<<" DNI "<<DNI<<endl;
+    cout<<"\t"<<setw(8)<<tipo<</*" ID "<<id<<" numeroSeguimiento "<<numeroSeguimiento<<*/" DNI "<<DNI<<endl;
 }
 void Pedido::generarDNI()
 {

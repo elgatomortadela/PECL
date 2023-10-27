@@ -94,13 +94,13 @@
   </Settings>
   <VirtualDirectory Name="src">
     <VirtualDirectory Name="Source Files">
+      <File Name="Pedido.cpp"/>
       <File Name="Gestor.cpp"/>
       <File Name="Cola.cpp"/>
       <File Name="Pila.cpp"/>
       <File Name="NodoLista.cpp"/>
       <File Name="NodoCola.cpp"/>
       <File Name="NodoPila.cpp"/>
-      <File Name="Pedido.cpp"/>
       <File Name="Lista.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Header Files">

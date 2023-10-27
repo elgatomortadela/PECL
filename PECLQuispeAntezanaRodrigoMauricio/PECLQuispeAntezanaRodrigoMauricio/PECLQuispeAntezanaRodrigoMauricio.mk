@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=evate
-Date                   :=22/10/2023
+Date                   :=27/10/2023
 CodeLitePath           :="C:/Program Files/CodeLite"
 MakeDirCommand         :=mkdir
 LinkerName             :=C:/msys64/clang64/bin/g++.exe
@@ -64,7 +64,7 @@ AS       := C:/msys64/clang64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix) $(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -105,16 +105,6 @@ $(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix): NodoPila.cpp
 $(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix): NodoPila.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix) NodoPila.cpp
 
-$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix): Pedido.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/Pedido.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix): Pedido.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix) Pedido.cpp
-
-$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix): NodoLista.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/NodoLista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix): NodoLista.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix) NodoLista.cpp
-
 $(IntermediateDirectory)/Pila.cpp$(ObjectSuffix): Pila.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/Pila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix): Pila.cpp
@@ -134,6 +124,16 @@ $(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix): Gestor.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/Gestor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Gestor.cpp$(PreprocessSuffix): Gestor.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Gestor.cpp$(PreprocessSuffix) Gestor.cpp
+
+$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix): NodoLista.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/NodoLista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix): NodoLista.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix) NodoLista.cpp
+
+$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix): Pedido.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/Pedido.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix): Pedido.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix) Pedido.cpp
 
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Universidad/ESTRUCTURAS DE DATOS/GITHUB/Cambios menores/PECL/PECLQuispeAntezanaRodrigoMauricio/PECLQuispeAntezanaRodrigoMauricio/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
