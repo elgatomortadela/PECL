@@ -4,8 +4,10 @@ Pedido::Pedido()
 {
     this->urgencia = (rand()%2);
     this->generarDNI();
-    this->generarID();
-    this->generarNumeroSeguimiento();
+    //this->id = id;
+    //this->numeroSeguimiento = numeroSeguimiento;
+    //this->generarID();
+    //this->generarNumeroSeguimiento();
 }
 bool Pedido::esUrgente()
 {
@@ -31,7 +33,7 @@ void Pedido::generarDNI()
     this->DNI[8] = letras[numDNI%23];
     this->DNI[9] = '\0';
 }
-void Pedido::generarID()
+/*void Pedido::generarID()
 {
     if(urgencia)
         id = (rand()%49)+51; // Numero entre 51 y 99
@@ -44,7 +46,7 @@ void Pedido::generarNumeroSeguimiento()
         numeroSeguimiento = (rand()%499)+501; // Numero entre 501 y 999
     else if(!urgencia)
         numeroSeguimiento = (rand()%499)+1;  // Numero entre 1 y 499
-}
+}*/
 void Pedido::setId(int id)
 {
     this -> id = id;

@@ -22,8 +22,8 @@ private:
     char DNI[10];
     
     void generarDNI();
-    void generarID();
-    void generarNumeroSeguimiento();
+    //void generarID();
+    //void generarNumeroSeguimiento();
     
     friend class NodoPila;
     friend class Pila;

@@ -44,61 +44,51 @@ void Gestor::borraPedidosPila()
 }
 void Gestor::encolarPedidos()
 {
+    int tamano = 49; // Generador de ids urgentes
+    int numeros[tamano];
+    // Rellenar el array con números del 51 al 99
+    for (int i = 0; i < tamano; i++) {
+        numeros[i] = i + 51;
+    }
+    // Generador de números aleatorios
+    random_device rd;
+    mt19937 g(rd());
+    // Mezclar aleatoriamente los elementos del array
+    shuffle(numeros, numeros + tamano, g);
+    int contador = 0;
+    
+    int tamano2 = 49; // Generador de ids estandar 
+    int numeros2[tamano2];
+    // Rellenar el array con números del 1 al 49
+    for (int i = 0; i < tamano2; i++) {
+        numeros2[i] = i + 1;
+    }
+    random_device rd2;
+    mt19937 g2(rd2());
+    // Mezclar aleatoriamente los elementos del array
+    shuffle(numeros2, numeros2 + tamano2, g2);
+    int contador2 = 0;
+    
     while (pila.getLongitud() >0) {
         if(pila.cima().urgencia){
+            pila.cima().setId(numeros[contador]);
             if(colaC.getLongitud() > colaD.getLongitud() or colaC.getLongitud() == colaD.getLongitud()){
                  colaD.insertar(pila.cima());
             }
             else if(colaD.getLongitud() > colaC.getLongitud()){
                 colaC.insertar(pila.cima());
             }
-            int tamano = 49; // Generador de ids??
-            int numeros[tamano];
-
-            // Rellenar el array con números del 1 al 49
-            for (int i = 0; i < tamano; i++) {
-                numeros[i] = i + 1;
-            }
-
-            // Crear un generador de números aleatorios
-            random_device rd;
-            mt19937 g(rd());
-
-            // Mezclar aleatoriamente los elementos del array
-            shuffle(numeros, numeros + tamano, g);
-
-            // Imprimir el array mezclado
-            for (int i = 0; i < tamano; i++) {
-                cout << numeros[i] << ' ';
-            }
-
+            contador = (contador + 1) % tamano;
         }
         else if(pila.cima().urgencia == false){
+            pila.cima().setId(numeros2[contador2]);
             if(colaA.getLongitud() > colaB.getLongitud() or colaA.getLongitud() == colaB.getLongitud()){
                 colaB.insertar(pila.cima());
             }
             else if(colaB.getLongitud() > colaA.getLongitud()){
                 colaA.insertar(pila.cima());
             }
-            int tamano = 49; // Generador de ids??
-            int numeros[tamano];
-
-            // Rellenar el array con números del 51 al 99
-            for (int i = 0; i < tamano; i++) {
-                numeros[i] = i + 51;
-            }
-
-            // Crear un generador de números aleatorios
-            random_device rd;
-            mt19937 g(rd());
-
-            // Mezclar aleatoriamente los elementos del array
-            shuffle(numeros, numeros + tamano, g);
-
-            // Imprimir el array mezclado
-            for (int i = 0; i < tamano; i++) {
-                cout << numeros[i] << ' ';
-            }
+            contador2 = (contador2 + 1) % tamano2;
         }
         pila.extraer();
     }
@@ -156,97 +146,25 @@ void Gestor::enlistarPedidos()
       listaEstandar.almacenar(colaA.verPrimero());
       colaA.eliminar();
     }
-    int tamano2 = 499;
-    int numeros2[tamano2];
 
-    // Rellenar el array con números del 1 al 499
-    for (int i = 0; i < tamano2; i++) {
-        numeros2[i] = i + 1;
-    }
-
-    // Crear un generador de números aleatorios
-    random_device rd2;
-    mt19937 g2(rd2());
-
-    // Mezclar aleatoriamente los elementos del array
-    shuffle(numeros2, numeros2 + tamano2, g2);
-
-    // Imprimir el array mezclado
-    for (int i = 0; i < tamano2; i++) {
-        cout << numeros2[i] << ' ';
-    }
     while(colaB.getLongitud() > 0)
     {
       listaEstandar.almacenar(colaB.verPrimero());
       colaB.eliminar();
     }
-    int tamano = 499;
-    int numeros[tamano];
-
-    // Rellenar el array con números del 501 al 999
-    for (int i = 0; i < tamano; i++) {
-        numeros[i] = i + 1;
-    }
-
-    // Crear un generador de números aleatorios
-    random_device rd;
-    mt19937 g(rd());
-
-    // Mezclar aleatoriamente los elementos del array
-    shuffle(numeros, numeros + tamano, g);
-
-    // Imprimir el array mezclado
-    for (int i = 0; i < tamano; i++) {
-        cout << numeros[i] << ' ';
-    }
+    
     while(colaC.getLongitud() > 0)
     {
       listaUrgente.almacenar(colaC.verPrimero());
       colaC.eliminar();
     }
-    int tamano3 = 499;
-    int numeros3[tamano3];
-
-    // Rellenar el array con números del 501 al 999
-    for (int i = 0; i < tamano3; i++) {
-        numeros3[i] = i + 501;
-    }
-
-    // Crear un generador de números aleatorios
-    random_device rd3;
-    mt19937 g3(rd3());
-
-    // Mezclar aleatoriamente los elementos del array
-    shuffle(numeros3, numeros3 + tamano3, g3);
-
-    // Imprimir el array mezclado
-    for (int i = 0; i < tamano3; i++) {
-        cout << numeros3[i] << ' ';
-    }
+    
     while(colaD.getLongitud() > 0)
     {
       listaUrgente.almacenar(colaD.verPrimero());
       colaD.eliminar();
     }
-    int tamano4 = 499;
-    int numeros4[tamano4];
-
-    // Rellenar el array con números del 501 al 999
-    for (int i = 0; i < tamano4; i++) {
-        numeros4[i] = i + 501;
-    }
-
-    // Crear un generador de números aleatorios
-    random_device rd4;
-    mt19937 g4(rd4());
-
-    // Mezclar aleatoriamente los elementos del array
-    shuffle(numeros4, numeros4 + tamano4, g4);
-
-    // Imprimir el array mezclado
-    for (int i = 0; i < tamano4; i++) {
-        cout << numeros4[i] << ' ';
-    }
+    
 }
 int Gestor::PedidosEnListaEstandar()
 {

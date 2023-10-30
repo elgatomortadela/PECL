@@ -5,7 +5,21 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Gestor.cpp" Name="FileName"/>
+      <int Value="42" Name="FirstVisibleLine"/>
+      <int Value="56" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Lista.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\main.cpp" Name="FileName"/>
+      <int Value="21" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
