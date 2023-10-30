@@ -5,21 +5,28 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Gestor.cpp" Name="FileName"/>
+      <int Value="17" Name="FirstVisibleLine"/>
+      <int Value="73" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Cola.cpp" Name="FileName"/>
+      <int Value="9" Name="FirstVisibleLine"/>
+      <int Value="28" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Pila.cpp" Name="FileName"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="32" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Pedido.cpp" Name="FileName"/>
       <int Value="42" Name="FirstVisibleLine"/>
-      <int Value="56" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Lista.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\rodri\Desktop\ATENCION\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\main.cpp" Name="FileName"/>
-      <int Value="21" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>

@@ -25,6 +25,8 @@ void Gestor::genera12Pedidos()
     if(pila.getLongitud()!=48)
         for(int i =0; i< 12; i++) {
             Pedido pedido;
+            //pedido.setId(0);
+            //pedido.setNumeroSeguimiento(0);
             pila.insertar(pedido);
         }
 }
@@ -44,51 +46,46 @@ void Gestor::borraPedidosPila()
 }
 void Gestor::encolarPedidos()
 {
-    int tamano = 49; // Generador de ids urgentes
+    /*int tamano = 49; // Generador de ids urgentes
     int numeros[tamano];
-    // Rellenar el array con números del 51 al 99
     for (int i = 0; i < tamano; i++) {
         numeros[i] = i + 51;
     }
-    // Generador de números aleatorios
     random_device rd;
     mt19937 g(rd());
-    // Mezclar aleatoriamente los elementos del array
     shuffle(numeros, numeros + tamano, g);
     int contador = 0;
     
     int tamano2 = 49; // Generador de ids estandar 
     int numeros2[tamano2];
-    // Rellenar el array con números del 1 al 49
     for (int i = 0; i < tamano2; i++) {
         numeros2[i] = i + 1;
     }
-    random_device rd2;
-    mt19937 g2(rd2());
-    // Mezclar aleatoriamente los elementos del array
+    //random_device rd2;
+    mt19937 g2(rd());
     shuffle(numeros2, numeros2 + tamano2, g2);
-    int contador2 = 0;
+    int contador2 = 0;*/
     
     while (pila.getLongitud() >0) {
         if(pila.cima().urgencia){
-            pila.cima().setId(numeros[contador]);
+            Pedido pedido = pila.cima();
+            pedido.setId(9); 
             if(colaC.getLongitud() > colaD.getLongitud() or colaC.getLongitud() == colaD.getLongitud()){
                  colaD.insertar(pila.cima());
             }
             else if(colaD.getLongitud() > colaC.getLongitud()){
                 colaC.insertar(pila.cima());
             }
-            contador = (contador + 1) % tamano;
+            //contador = (contador+1)%tamano;
         }
         else if(pila.cima().urgencia == false){
-            pila.cima().setId(numeros2[contador2]);
             if(colaA.getLongitud() > colaB.getLongitud() or colaA.getLongitud() == colaB.getLongitud()){
                 colaB.insertar(pila.cima());
             }
             else if(colaB.getLongitud() > colaA.getLongitud()){
                 colaA.insertar(pila.cima());
             }
-            contador2 = (contador2 + 1) % tamano2;
+            //contador2 = (contador2+1)%tamano2;
         }
         pila.extraer();
     }
