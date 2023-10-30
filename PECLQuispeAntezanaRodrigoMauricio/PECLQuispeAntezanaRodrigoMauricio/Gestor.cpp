@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip>
 #include <list>
+#include <random>
+#include <algorithm>
 
 Gestor::Gestor()
 {
@@ -50,6 +52,26 @@ void Gestor::encolarPedidos()
             else if(colaD.getLongitud() > colaC.getLongitud()){
                 colaC.insertar(pila.cima());
             }
+            int tamano = 49; // Generador de ids??
+            int numeros[tamano];
+
+            // Rellenar el array con números del 1 al 49
+            for (int i = 0; i < tamano; i++) {
+                numeros[i] = i + 1;
+            }
+
+            // Crear un generador de números aleatorios
+            random_device rd;
+            mt19937 g(rd());
+
+            // Mezclar aleatoriamente los elementos del array
+            shuffle(numeros, numeros + tamano, g);
+
+            // Imprimir el array mezclado
+            for (int i = 0; i < tamano; i++) {
+                cout << numeros[i] << ' ';
+            }
+
         }
         else if(pila.cima().urgencia == false){
             if(colaA.getLongitud() > colaB.getLongitud() or colaA.getLongitud() == colaB.getLongitud()){
@@ -57,6 +79,25 @@ void Gestor::encolarPedidos()
             }
             else if(colaB.getLongitud() > colaA.getLongitud()){
                 colaA.insertar(pila.cima());
+            }
+            int tamano = 49; // Generador de ids??
+            int numeros[tamano];
+
+            // Rellenar el array con números del 1 al 49
+            for (int i = 0; i < tamano; i++) {
+                numeros[i] = i + 51;
+            }
+
+            // Crear un generador de números aleatorios
+            random_device rd;
+            mt19937 g(rd());
+
+            // Mezclar aleatoriamente los elementos del array
+            shuffle(numeros, numeros + tamano, g);
+
+            // Imprimir el array mezclado
+            for (int i = 0; i < tamano; i++) {
+                cout << numeros[i] << ' ';
             }
         }
         pila.extraer();
