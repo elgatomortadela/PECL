@@ -45,6 +45,22 @@ void Pedido::generarNumeroSeguimiento()
     else if(!urgencia)
         numeroSeguimiento = (rand()%499)+1;  // Numero entre 1 y 499
 }
+void Pedido::setId(int id)
+{
+    this -> id = id;
+}
+void Pedido::setNumeroSeguimiento(int numeroSeguimiento)
+{
+    this ->numeroSeguimiento = numeroSeguimiento;
+}
+int Pedido::getId()
+{
+    return this->id;
+}
+int Pedido::getNumeroSeguimiento()
+{
+    return this->numeroSeguimiento;
+}
 Pedido::~Pedido()
 {
 }

@@ -10,6 +10,10 @@ public:
     Pedido();
     bool esUrgente();
     void mostrar();
+    void setId(int id);
+    int getId();
+    void setNumeroSeguimiento(int numeroSeguimiento);
+    int getNumeroSeguimiento();
     ~Pedido();
 private:
     int id;
