@@ -83,7 +83,7 @@ void Gestor::encolarPedidos()
             int tamano = 49; // Generador de ids??
             int numeros[tamano];
 
-            // Rellenar el array con números del 1 al 49
+            // Rellenar el array con números del 51 al 99
             for (int i = 0; i < tamano; i++) {
                 numeros[i] = i + 51;
             }
