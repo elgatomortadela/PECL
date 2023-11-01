@@ -9,11 +9,14 @@ Cola colaA; //Cola para estandar
 Cola colaB;//Cola para estandar
 Cola colaC;//Cola para urgente
 Cola colaD;//Cola para urgente
+Lista listaEstandar;
+Lista listaUrgente;
 
 
 void Gestor::genera12Pedidos()
 {
-    if(pila.getLongitud()!=48)
+    int longitudTotal = pila.getLongitud()+colaA.getLongitud()+colaB.getLongitud()+colaC.getLongitud()+colaD.getLongitud()+listaEstandar.getLongitud()+listaUrgente.getLongitud();
+    if(longitudTotal!=48)
         for(int i =0; i< 12; i++) {
             Pedido pedido;
             pila.insertar(pedido);
@@ -100,6 +103,56 @@ void Gestor::borraPedidosColas()
     while(colaD.getLongitud() >0) {
         colaD.eliminar();
     }
+}
+void Gestor::enlistarPedidos()
+{
+    while(colaA.getLongitud() > 0)
+    {
+      listaEstandar.almacenar(colaA.verPrimero());
+      colaA.eliminar();
+    }
+
+    while(colaB.getLongitud() > 0)
+    {
+      listaEstandar.almacenar(colaB.verPrimero());
+      colaB.eliminar();
+    }
+    
+    while(colaC.getLongitud() > 0)
+    {
+      listaUrgente.almacenar(colaC.verPrimero());
+      colaC.eliminar();
+    }
+    
+    while(colaD.getLongitud() > 0)
+    {
+      listaUrgente.almacenar(colaD.verPrimero());
+      colaD.eliminar();
+    }
+    
+}
+int Gestor::PedidosEnListaEstandar()
+{
+    return listaEstandar.getLongitud();
+}
+int Gestor::PedidosEnListaUrgentes()
+{
+    return listaUrgente.getLongitud();
+}
+void Gestor::muestraPedidosUrgentes()
+{
+    cout<<"Lista Urgente: "<< endl;
+    listaUrgente.mostrar();
+}
+void Gestor::muestraPedidosEstandar()
+{
+    cout<<"Lista Estandar: "<< endl;
+    listaEstandar.mostrar();
+}
+void Gestor::reiniciar()
+{
+    borraPedidosColas();
+    borraPedidosPila();
 }
 Gestor::~Gestor()
 {

@@ -25,7 +25,7 @@ void Cola::mostrar()
     pnodoCola aux = primero;
     cout <<"Los pedidos son:"<<endl;
     while(aux) {
-        cout <<" Es urgente: " << aux ->pedido.urgencia<<" DNI: "<<aux->pedido.DNI<<" ID: "<<aux->pedido.id<<" Numero de seguimiento: "<<aux->pedido.numeroSeguimiento<<endl;
+        cout <<" Es urgente: " << aux ->pedido.urgencia<<" DNI: "<<aux->pedido.DNI<<" ID: "<<aux->pedido.id<<endl;
         aux = aux ->siguiente;
     }
     cout << endl;

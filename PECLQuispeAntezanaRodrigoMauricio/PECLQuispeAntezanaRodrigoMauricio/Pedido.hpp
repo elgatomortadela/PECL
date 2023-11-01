@@ -2,6 +2,7 @@
 #define PEDIDO_HPP
 #include <iostream>
 #include <iomanip>
+#include <random>
 using namespace std;
 
 class Pedido
@@ -26,6 +27,8 @@ private:
     friend class NodoCola;
     friend class Cola;
     friend class Gestor;
+    friend class Lista;
+    friend class NodoLista;
 
 };
 

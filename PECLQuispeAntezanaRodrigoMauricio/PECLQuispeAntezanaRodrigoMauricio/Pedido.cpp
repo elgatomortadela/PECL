@@ -33,17 +33,53 @@ void Pedido::generarDNI()
 }
 void Pedido::generarID()
 {
-    if(urgencia)
-        id = (rand()%49)+51; // Numero entre 51 y 99
-    else if(!urgencia)
-        id = (rand()%49)+1;  // Numero entre 1 y 49
+    if(urgencia){
+        int tamano = 49;
+        int numeros[tamano];
+        for (int i = 0; i < tamano; i++) {
+        numeros[i] = i + 51;
+    }
+    random_device rd;
+    mt19937 g(rd());
+    shuffle(numeros, numeros + tamano, g);
+    id = numeros[0];
+    }
+    else if(!urgencia){
+        int tamano2 = 49; // Generador de ids estandar 
+        int numeros2[tamano2];
+        for (int i = 0; i < tamano2; i++) {
+        numeros2[i] = i + 1;
+    }
+    random_device rd2;
+    mt19937 g2(rd2());
+    shuffle(numeros2, numeros2 + tamano2, g2);
+    id = numeros2[0];
+    }
 }
 void Pedido::generarNumeroSeguimiento()
 {
-    if(urgencia)
-        numeroSeguimiento = (rand()%499)+501; // Numero entre 501 y 999
-    else if(!urgencia)
-        numeroSeguimiento = (rand()%499)+1;  // Numero entre 1 y 499
+    if(urgencia){
+        int tamano = 499;
+        int numeros[tamano];
+        for (int i = 0; i < tamano; i++) {
+        numeros[i] = i + 501;
+    }
+    random_device rd;
+    mt19937 g(rd());
+    shuffle(numeros, numeros + tamano, g);
+    numeroSeguimiento = numeros[0];
+    }
+    else if(!urgencia){
+        int tamano2 = 499; // Generador de ids estandar 
+        int numeros2[tamano2];
+        for (int i = 0; i < tamano2; i++) {
+        numeros2[i] = i + 1;
+    }
+    random_device rd2;
+    mt19937 g2(rd2());
+    shuffle(numeros2, numeros2 + tamano2, g2);
+    numeroSeguimiento = numeros2[0];
+    }
 }
 Pedido::~Pedido()
 {
