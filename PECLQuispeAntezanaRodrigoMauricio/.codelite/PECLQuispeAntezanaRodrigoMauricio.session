@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio.workspace">
-  <int Value="9" Name="m_selectedTab"/>
+  <int Value="1" Name="m_selectedTab"/>
   <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,8 +12,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\main.cpp" Name="FileName"/>
-      <int Value="6" Name="FirstVisibleLine"/>
-      <int Value="19" Name="CurrentLine"/>
+      <int Value="5" Name="FirstVisibleLine"/>
+      <int Value="9" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -69,7 +69,7 @@
     <TabInfo>
       <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\Cola.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="28" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -96,6 +96,27 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\NodoPila.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\NodoPila.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\NodoLista.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Universidad\ESTRUCTURAS DE DATOS\GITHUB\Cambios menores\PECL\PECLQuispeAntezanaRodrigoMauricio\PECLQuispeAntezanaRodrigoMauricio\NodoCola.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>

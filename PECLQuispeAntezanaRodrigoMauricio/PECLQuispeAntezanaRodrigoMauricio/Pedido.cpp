@@ -52,7 +52,6 @@ void Pedido::generarID()
         mt19937 g(rd());
         // Mezclar aleatoriamente los elementos del array
         shuffle(numeros, numeros + tamano, g);
-        int contador = 0;
         id=numeros[0];
     }
         
@@ -65,7 +64,6 @@ void Pedido::generarID()
         mt19937 g(rd2());
         // Mezclar aleatoriamente los elementos del array
         shuffle(numeros, numeros + tamano, g);
-        int contador = 0;
         id=numeros[0];
         
     }
