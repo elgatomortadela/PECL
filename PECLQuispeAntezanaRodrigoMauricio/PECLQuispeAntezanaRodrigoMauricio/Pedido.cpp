@@ -1,4 +1,13 @@
 #include "Pedido.hpp"
+#include <vector>
+#include <cstdlib>
+#include <iostream>
+#include <iomanip>
+#include <list>
+#include <random>
+#include <algorithm>
+using namespace std;
+
 
 Pedido::Pedido()
 {
@@ -6,6 +15,8 @@ Pedido::Pedido()
     this->generarDNI();
     this->generarID();
     this->generarNumeroSeguimiento();
+    int primero = NULL;
+    int ultimo = NULL;
 }
 bool Pedido::esUrgente()
 {
@@ -34,6 +45,20 @@ void Pedido::generarDNI()
 void Pedido::generarID()
 {
     if(urgencia)
+        
+       /* //generar lista
+        for(int i=0;i<49;++i){
+            int num1 = (rand()%48);
+            while(num1 in lista)
+            {
+                int num1 = (rand()%48);
+            }
+            lista[i] = num1+51;
+        }
+        posicion=();
+        this->id=lista[posicion];*/
+        
+                
         id = (rand()%49)+51; // Numero entre 51 y 99
     else if(!urgencia)
         id = (rand()%49)+1;  // Numero entre 1 y 49

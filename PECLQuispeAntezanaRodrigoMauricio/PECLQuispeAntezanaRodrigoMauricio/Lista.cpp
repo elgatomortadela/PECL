@@ -2,6 +2,7 @@
 
 Lista::Lista()
 {
+    primero = NULL;
     ultimo = NULL;
     longitud = 0;
 }
@@ -42,6 +43,10 @@ void Lista::mostrar()
 int Lista::getLongitud()
 {
     return this ->longitud;
+}
+Pedido Lista::verPrimero()
+{
+    return primero->pedido;
 }
 
 Lista::~Lista()

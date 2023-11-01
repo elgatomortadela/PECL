@@ -2,9 +2,36 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std;
+#include <random>
+#include <set>
+
+// Función para generar un número aleatorio único
+int generarNumeroUnico(int min, int max) {
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> distribucion(min, max);
+
+    set<int> numerosGenerados;
+
+    int numeroGenerado;
+
+    do {
+        numeroGenerado = distribucion(gen);
+    } while (!numerosGenerados.insert(numeroGenerado).second); // Inserta y verifica si se pudo insertar
+
+    return numeroGenerado;
+}
+
 
 int main(int argc, char **argv)
 {
+    int min = 1; // Límite inferior del rango
+    int max = 5; // Límite superior del rango
+
+    int numero = generarNumeroUnico(min, max);
+
+    std::cout << "Número aleatorio único generado: " << numero << std::endl;
+    
     Gestor gestor;
     char opcion;
         do {
@@ -96,7 +123,7 @@ int main(int argc, char **argv)
             gestor.muestraPedidosUrgentes();
             break;
         case 'K':
-            // gestor.buscarPedidos();
+            gestor.buscarPedidos();
             break;
         case 'L':
             gestor.reiniciar();
@@ -133,6 +160,7 @@ int main(int argc, char **argv)
             break;
         }
     } while(opcion != 'S');
+
 
     return 0;
 }

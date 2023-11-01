@@ -12,6 +12,7 @@ public:
     void mostrar();
     //Pedido ordenar();
     int getLongitud();
+    Pedido verPrimero();
 private:
     pnodoLista primero, ultimo;
     int longitud;

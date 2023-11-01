@@ -22,7 +22,7 @@ Lista listaEstandar;
 void Gestor::genera12Pedidos()
 {
     
-    if(pila.getLongitud()!=48)
+    if(pila.getLongitud()+colaB.getLongitud()+colaD.getLongitud()+colaC.getLongitud()+colaA.getLongitud()+listaEstandar.getLongitud()+listaUrgente.getLongitud()<48)
         for(int i =0; i< 12; i++) {
             Pedido pedido;
             pila.insertar(pedido);
@@ -44,7 +44,7 @@ void Gestor::borraPedidosPila()
 }
 void Gestor::encolarPedidos()
 {
-    while (pila.getLongitud() >0) {
+    while (pila.getLongitud() > 0) {
         if(pila.cima().urgencia){
             if(colaC.getLongitud() > colaD.getLongitud() or colaC.getLongitud() == colaD.getLongitud()){
                  colaD.insertar(pila.cima());
@@ -52,6 +52,7 @@ void Gestor::encolarPedidos()
             else if(colaD.getLongitud() > colaC.getLongitud()){
                 colaC.insertar(pila.cima());
             }
+            /*
             int tamano = 49; // Generador de ids??
             int numeros[tamano];
 
@@ -70,7 +71,7 @@ void Gestor::encolarPedidos()
             // Imprimir el array mezclado
             for (int i = 0; i < tamano; i++) {
                 cout << numeros[i] << ' ';
-            }
+            }*/
 
         }
         else if(pila.cima().urgencia == false){
@@ -79,7 +80,7 @@ void Gestor::encolarPedidos()
             }
             else if(colaB.getLongitud() > colaA.getLongitud()){
                 colaA.insertar(pila.cima());
-            }
+            }/*
             int tamano = 49; // Generador de ids??
             int numeros[tamano];
 
@@ -98,7 +99,7 @@ void Gestor::encolarPedidos()
             // Imprimir el array mezclado
             for (int i = 0; i < tamano; i++) {
                 cout << numeros[i] << ' ';
-            }
+            }*/
         }
         pila.extraer();
     }
@@ -155,10 +156,10 @@ void Gestor::enlistarPedidos()
     {
       listaEstandar.almacenar(colaA.verPrimero());
       colaA.eliminar();
-    }
+    }/*
     int tamano2 = 499;
     int numeros2[tamano2];
-
+    
     // Rellenar el array con números del 1 al 499
     for (int i = 0; i < tamano2; i++) {
         numeros2[i] = i + 1;
@@ -174,12 +175,12 @@ void Gestor::enlistarPedidos()
     // Imprimir el array mezclado
     for (int i = 0; i < tamano2; i++) {
         cout << numeros2[i] << ' ';
-    }
+    }*/
     while(colaB.getLongitud() > 0)
     {
       listaEstandar.almacenar(colaB.verPrimero());
       colaB.eliminar();
-    }
+    }/*
     int tamano = 499;
     int numeros[tamano];
 
@@ -198,12 +199,12 @@ void Gestor::enlistarPedidos()
     // Imprimir el array mezclado
     for (int i = 0; i < tamano; i++) {
         cout << numeros[i] << ' ';
-    }
+    }*/
     while(colaC.getLongitud() > 0)
     {
       listaUrgente.almacenar(colaC.verPrimero());
       colaC.eliminar();
-    }
+    }/*
     int tamano3 = 499;
     int numeros3[tamano3];
 
@@ -222,12 +223,12 @@ void Gestor::enlistarPedidos()
     // Imprimir el array mezclado
     for (int i = 0; i < tamano3; i++) {
         cout << numeros3[i] << ' ';
-    }
+    }*/
     while(colaD.getLongitud() > 0)
     {
       listaUrgente.almacenar(colaD.verPrimero());
       colaD.eliminar();
-    }
+    }/*
     int tamano4 = 499;
     int numeros4[tamano4];
 
@@ -246,7 +247,7 @@ void Gestor::enlistarPedidos()
     // Imprimir el array mezclado
     for (int i = 0; i < tamano4; i++) {
         cout << numeros4[i] << ' ';
-    }
+    }*/
 }
 int Gestor::PedidosEnListaEstandar()
 {
@@ -265,6 +266,22 @@ void Gestor::muestraPedidosEstandar()
 {
     cout<<"Lista Estandar: "<< endl;
     listaEstandar.mostrar();
+}
+void Gestor::buscarPedidos()
+{
+    if (listaUrgente.getLongitud() > 0) {
+        cout<<"Pedido prioritario Urgente: "<<endl;
+        listaUrgente.verPrimero().mostrar();
+    } else {
+        cout<<"No hay pedidos urgentes." << endl;
+    }
+
+    if (listaEstandar.getLongitud() > 0) {
+        cout<<"Pedido prioritario Estandar: "<<endl;
+        listaEstandar.verPrimero().mostrar();
+    } else {
+        cout<<"No hay pedidos estandar." << endl;
+    }
 }
 void Gestor::reiniciar()
 {

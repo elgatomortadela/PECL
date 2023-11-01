@@ -17,6 +17,7 @@ public:
     ~Gestor();
     void genera12Pedidos();
     void muestraPedidos();
+    void buscarPedidos();
     void borraPedidosPila();
     int PedidosEnPila();
     int PedidosEnSalaA();
@@ -33,7 +34,7 @@ public:
     void enlistarPedidos();
     void muestraPedidosEstandar();
     void muestraPedidosUrgentes();
-    string array_dni[48];
+
 };
 
 #endif // GESTOR_HPP
