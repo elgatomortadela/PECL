@@ -15,8 +15,6 @@ Pedido::Pedido()
     this->generarDNI();
     this->generarID();
     this->generarNumeroSeguimiento();
-    int primero = NULL;
-    int ultimo = NULL;
 }
 bool Pedido::esUrgente()
 {
@@ -24,10 +22,7 @@ bool Pedido::esUrgente()
 }
 void Pedido::mostrar()
 {
-    string tipo = "Estándar";
-    if(urgencia)
-        tipo = "Urgente";
-    cout<<"\t"<<setw(8)<<tipo<</*" ID "<<id<<" numeroSeguimiento "<<numeroSeguimiento<<*/" DNI "<<DNI<<endl;
+    cout<<"Es urgente: "<<urgencia<<" DNI: "<<DNI<<endl;
 }
 void Pedido::generarDNI()
 {
@@ -44,49 +39,70 @@ void Pedido::generarDNI()
 }
 void Pedido::generarID()
 {
-    if(urgencia)
-        
-       /* //generar lista
-        for(int i=0;i<49;++i){
-            int num1 = (rand()%48);
-            while(num1 in lista)
-            {
-                int num1 = (rand()%48);
-            }
-            lista[i] = num1+51;
+    int tamano = 49; // Generador de ids urgentes
+    int numeros[tamano];
+    
+    if(urgencia){
+        // Rellenar el array con números del 51 al 99
+        for (int i = 0; i < tamano; i++) {
+        numeros[i] = i + 51;
         }
-        posicion=();
-        this->id=lista[posicion];*/
+        // Generador de números aleatorios
+        random_device rd;
+        mt19937 g(rd());
+        // Mezclar aleatoriamente los elementos del array
+        shuffle(numeros, numeros + tamano, g);
+        int contador = 0;
+        id=numeros[0];
+    }
         
-                
-        id = (rand()%49)+51; // Numero entre 51 y 99
-    else if(!urgencia)
-        id = (rand()%49)+1;  // Numero entre 1 y 49
+    else if(!urgencia){
+        // Rellenar el array con números del 1 al 49
+        for (int i = 0; i < tamano; i++) {
+            numeros[i] = i + 1;
+        }
+        random_device rd2;
+        mt19937 g(rd2());
+        // Mezclar aleatoriamente los elementos del array
+        shuffle(numeros, numeros + tamano, g);
+        int contador = 0;
+        id=numeros[0];
+        
+    }
 }
 void Pedido::generarNumeroSeguimiento()
 {
-    if(urgencia)
-        numeroSeguimiento = (rand()%499)+501; // Numero entre 501 y 999
-    else if(!urgencia)
-        numeroSeguimiento = (rand()%499)+1;  // Numero entre 1 y 499
+    int tamano = 448; // Generador de ids urgentes
+    int numeros[tamano];
+    
+    if(urgencia){
+        // Rellenar el array con números del 501 y 999
+        for (int i = 0; i < tamano; i++) {
+            numeros[i] = i + 501;
+        }
+        random_device rd2;
+        mt19937 g(rd2());
+        // Mezclar aleatoriamente los elementos del array
+        shuffle(numeros, numeros + tamano, g);
+        int contador = 0;
+        numeroSeguimiento = numeros[contador];
+        
+    }
+    else if(!urgencia){
+        // Rellenar el array con números del 1 al 449
+        for (int i = 0; i < tamano; i++) {
+            numeros[i] = i + 1;
+        }
+        random_device rd2;
+        mt19937 g(rd2());
+        // Mezclar aleatoriamente los elementos del array
+        shuffle(numeros, numeros + tamano, g);
+        int contador = 0;
+        numeroSeguimiento = numeros[contador];
+        
+    }
 }
-void Pedido::setId(int id)
-{
-    this -> id = id;
-}
-void Pedido::setNumeroSeguimiento(int numeroSeguimiento)
-{
-    this ->numeroSeguimiento = numeroSeguimiento;
-}
-int Pedido::getId()
-{
-    return this->id;
-}
-int Pedido::getNumeroSeguimiento()
-{
-    return this->numeroSeguimiento;
-}
+
 Pedido::~Pedido()
 {
 }
-

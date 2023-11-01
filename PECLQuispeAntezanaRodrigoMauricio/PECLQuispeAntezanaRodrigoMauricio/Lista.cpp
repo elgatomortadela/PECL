@@ -28,16 +28,32 @@ void Lista::almacenar(Pedido p)
     }
 
     longitud++;
+    
 }
 void Lista::mostrar()
 {
     pnodoLista aux = primero;
     cout <<"Los pedidos son:"<<endl;
     while(aux) {
-        cout <<" Es urgente: " << aux ->pedido.urgencia<<" DNI: "<<aux->pedido.DNI<<" ID: "<<aux->pedido.id<<" Numero de seguimiento: "<<aux->pedido.numeroSeguimiento<<endl;
+        cout<<"Es urgente: "<<aux ->pedido.urgencia<<" DNI: "<<aux->pedido.DNI<<" ID: "<<aux->pedido.id<<" Numero de seguimiento: "<<aux->pedido.numeroSeguimiento<<endl;
         aux = aux ->siguiente;
     }
     cout << endl;
+}
+Pedido Lista::eliminar()
+{
+    pnodoLista nodo;
+    Pedido p;
+    nodo = primero;
+    if(!nodo)
+        return Pedido();
+    primero = nodo ->siguiente;
+    p = nodo ->pedido;
+    delete nodo;
+    if(!primero)
+        ultimo = NULL;
+    longitud--;
+    return p;
 }
 
 int Lista::getLongitud()

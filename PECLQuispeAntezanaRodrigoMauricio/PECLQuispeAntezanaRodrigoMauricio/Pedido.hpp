@@ -10,10 +10,8 @@ public:
     Pedido();
     bool esUrgente();
     void mostrar();
-    void setId(int id);
-    int getId();
-    void setNumeroSeguimiento(int numeroSeguimiento);
-    int getNumeroSeguimiento();
+    void generarNumeroSeguimiento();
+    void generarID();
     ~Pedido();
 private:
     int id;
@@ -22,8 +20,8 @@ private:
     char DNI[10];
     
     void generarDNI();
-    void generarID();
-    void generarNumeroSeguimiento();
+    //void generarID();
+    //void generarNumeroSeguimiento();
     
     friend class NodoPila;
     friend class Pila;

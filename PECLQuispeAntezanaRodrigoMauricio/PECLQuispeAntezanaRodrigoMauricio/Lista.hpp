@@ -13,6 +13,7 @@ public:
     //Pedido ordenar();
     int getLongitud();
     Pedido verPrimero();
+    Pedido eliminar();
 private:
     pnodoLista primero, ultimo;
     int longitud;

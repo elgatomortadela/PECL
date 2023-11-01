@@ -19,6 +19,7 @@ public:
     void muestraPedidos();
     void buscarPedidos();
     void borraPedidosPila();
+    void borraPedidosLista();
     int PedidosEnPila();
     int PedidosEnSalaA();
     int PedidosEnSalaB();
