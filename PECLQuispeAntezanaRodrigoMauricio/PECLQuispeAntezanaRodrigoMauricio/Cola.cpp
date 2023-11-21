@@ -1,7 +1,4 @@
 #include "Cola.hpp"
-#include <Pedido.hpp>
-using namespace std;
-#include <iostream>
 
 Cola::Cola()
 {
@@ -9,8 +6,10 @@ Cola::Cola()
     ultimo = NULL;
     longitud = 0;
 }
+Pedido pedido;
 void Cola::insertar(Pedido p)
 {
+    
     pnodoCola nuevo;
     nuevo = new NodoCola(p);
     if(ultimo)
@@ -25,7 +24,9 @@ void Cola::mostrar()
     pnodoCola aux = primero;
     cout <<"Los pedidos son:"<<endl;
     while(aux) {
-        cout <<" Es urgente: " << aux ->pedido.urgencia<<" DNI: "<<aux->pedido.DNI<<" ID: "<<aux->pedido.id<<endl;
+
+        cout <<" Es urgente: " << aux ->pedido.esUrgente()<<" DNI: "<<aux->pedido.getDni()<<" ID: "<<aux->pedido.getId()<<endl;
+
         aux = aux ->siguiente;
     }
     cout << endl;

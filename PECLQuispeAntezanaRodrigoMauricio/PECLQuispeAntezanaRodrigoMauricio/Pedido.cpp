@@ -4,8 +4,8 @@ Pedido::Pedido()
 {
     this->urgencia = (rand()%2);
     this->generarDNI();
-    this->generarID();
-    this->generarNumeroSeguimiento();
+    this->id = 0;
+    this->numeroSeguimiento = 0;
 }
 bool Pedido::esUrgente()
 {
@@ -13,10 +13,27 @@ bool Pedido::esUrgente()
 }
 void Pedido::mostrar()
 {
-    string tipo = "Estándar";
-    if(urgencia)
-        tipo = "Urgente";
-    cout<<"\t"<<setw(8)<<tipo<<" ID "<<id<<" numeroSeguimiento "<<numeroSeguimiento<<" DNI "<<DNI<<endl;
+    cout<<"Es urgente: "<<urgencia<<" DNI: "<<DNI<<" ID: "<<id<<" Numero de seguimiento: "<<numeroSeguimiento<<endl;
+}
+void Pedido::setId(int id)
+{
+    this->id = id;
+}
+void Pedido::setNumeroSeguimiento(int numeroSeguimiento)
+{
+    this->numeroSeguimiento = numeroSeguimiento;
+}
+int Pedido::getId()
+{
+    return this->id;
+}
+int Pedido::getNumeroSeguimiento()
+{
+    return this->numeroSeguimiento;
+}
+char* Pedido::getDni()
+{
+    return this->DNI;
 }
 void Pedido::generarDNI()
 {
@@ -31,57 +48,7 @@ void Pedido::generarDNI()
     this->DNI[8] = letras[numDNI%23];
     this->DNI[9] = '\0';
 }
-void Pedido::generarID()
-{
-    if(urgencia){
-        int tamano = 49;
-        int numeros[tamano];
-        for (int i = 0; i < tamano; i++) {
-        numeros[i] = i + 51;
-    }
-    random_device rd;
-    mt19937 g(rd());
-    shuffle(numeros, numeros + tamano, g);
-    id = numeros[0];
-    }
-    else if(!urgencia){
-        int tamano2 = 49; // Generador de ids estandar 
-        int numeros2[tamano2];
-        for (int i = 0; i < tamano2; i++) {
-        numeros2[i] = i + 1;
-    }
-    random_device rd2;
-    mt19937 g2(rd2());
-    shuffle(numeros2, numeros2 + tamano2, g2);
-    id = numeros2[0];
-    }
-}
-void Pedido::generarNumeroSeguimiento()
-{
-    if(urgencia){
-        int tamano = 499;
-        int numeros[tamano];
-        for (int i = 0; i < tamano; i++) {
-        numeros[i] = i + 501;
-    }
-    random_device rd;
-    mt19937 g(rd());
-    shuffle(numeros, numeros + tamano, g);
-    numeroSeguimiento = numeros[0];
-    }
-    else if(!urgencia){
-        int tamano2 = 499; // Generador de ids estandar 
-        int numeros2[tamano2];
-        for (int i = 0; i < tamano2; i++) {
-        numeros2[i] = i + 1;
-    }
-    random_device rd2;
-    mt19937 g2(rd2());
-    shuffle(numeros2, numeros2 + tamano2, g2);
-    numeroSeguimiento = numeros2[0];
-    }
-}
+
 Pedido::~Pedido()
 {
 }
-

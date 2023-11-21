@@ -1,7 +1,7 @@
 #include <Gestor.hpp>
 #include <stdio.h>
-#include <iostream>
-using namespace std;
+#include <set>
+
 
 int main(int argc, char **argv)
 {
@@ -16,8 +16,8 @@ int main(int argc, char **argv)
              << gestor.PedidosEnSalaB() << "\tSala C-> " <<  gestor.PedidosEnSalaC() << "\tSala D-> "
              << gestor.PedidosEnSalaD()
              << " \n\tPedidos en las listas:\n \t\tEstandar-> "
-             <<  gestor.PedidosEnListaEstandar() << "\tUrgentes-> " <<  gestor.PedidosEnListaUrgentes()
-             << "\n\tPedidos en el arbol -> " << 0                            /*gestor.PedidosEnArbol()*/
+             << gestor.PedidosEnListaEstandar() << "\tUrgentes-> " << gestor.PedidosEnListaUrgentes()
+             << "\n\tPedidos en el arbol -> " <<                             gestor.PedidosEnArbol()
              << "\n";
         cout << "\t----------------------------------------------------------------"
                 "------\n\n";
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
                 "por numero de seguimiento en orden ascendente.\n";
         cout << "\tP. Mostrar los datos de todos los Pedidos recorriendo el arbol "
                 "en inorden.\n";
-        cout << "\tQ. Buscar en el ABB el Pedido Estándar con el numero de "
+        cout << "\tQ. Buscar en el ABB el Pedido Estandar con el numero de "
                 "seguimiento mas alto y mas bajo, asi como los Pedidos Urgentes "
                 "con el numero de ID mas alto y mas bajo.\n";
         cout << "\tR. Contar el numero de Pedidos almacenados en el ABB cuyos "
@@ -87,37 +87,37 @@ int main(int argc, char **argv)
              gestor.borraPedidosColas();
             break;
         case 'H':
-             gestor.enlistarPedidos();
+            gestor.enlistarPedidos();
             break;
         case 'I':
-             gestor.muestraPedidosEstandar();
+            gestor.muestraPedidosEstandar();
             break;
         case 'J':
-             gestor.muestraPedidosUrgentes();
+            gestor.muestraPedidosUrgentes();
             break;
         case 'K':
-            // gestor.buscarPedidos();
+            gestor.buscarPedidos();
             break;
         case 'L':
-             gestor.reiniciar();
+            gestor.reiniciar();
             break;
         case 'M':
-            //...;
+            gestor.dibujarArbol();
             break;
         case 'N':
-            //...;
+            gestor.mostrarEstandarArbol();
             break;
         case 'O':
-            //...;
+            gestor.mostrarUrgentesArbol();
             break;
         case 'P':
-            //...;
+            gestor.mostrarInorder();
             break;
         case 'Q':
             //...;
             break;
         case 'R':
-            //...;
+            gestor.cantidadImpares();
             break;
         case 'T':
             //...;
@@ -133,6 +133,7 @@ int main(int argc, char **argv)
             break;
         }
     } while(opcion != 'S');
+
 
     return 0;
 }

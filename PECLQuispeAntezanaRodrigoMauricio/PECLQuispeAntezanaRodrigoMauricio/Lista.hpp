@@ -1,7 +1,6 @@
 #ifndef LISTA_HPP
 #define LISTA_HPP
 #include "NodoLista.hpp"
-#include "Pedido.hpp"
 
 class Lista
 {
@@ -12,6 +11,9 @@ public:
     void mostrar();
     //Pedido ordenar();
     int getLongitud();
+    Pedido verPrimero();
+    Pedido eliminar();
+    Pedido verUltimo();
 private:
     pnodoLista primero, ultimo;
     int longitud;

@@ -1,5 +1,4 @@
 #include "Pila.hpp"
-#include "Pedido.hpp"
 
 Pila::Pila()
 {
@@ -38,7 +37,7 @@ void Pila::mostrar()
     pnodoPila aux = ultimo;
     cout <<" Los datos de los pedidos son:"<<endl;
     while(aux) {
-        cout <<" Es urgente:" << aux ->pedido.urgencia<<" DNI: " << aux->pedido.DNI<<endl;
+        cout <<" Es urgente:" << aux ->pedido.esUrgente()<<" DNI: " << aux->pedido.getDni()<<endl;
         aux = aux ->siguiente;
     }
     cout << endl;

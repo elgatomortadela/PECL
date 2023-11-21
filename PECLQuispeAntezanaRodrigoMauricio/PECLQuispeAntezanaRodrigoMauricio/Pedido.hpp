@@ -2,7 +2,6 @@
 #define PEDIDO_HPP
 #include <iostream>
 #include <iomanip>
-#include <random>
 using namespace std;
 
 class Pedido
@@ -11,6 +10,11 @@ public:
     Pedido();
     bool esUrgente();
     void mostrar();
+    void setId(int id);
+    void setNumeroSeguimiento(int numeroSeguimiento);
+    int getId();
+    int getNumeroSeguimiento();
+    char* getDni();
     ~Pedido();
 private:
     int id;
@@ -19,16 +23,6 @@ private:
     char DNI[10];
     
     void generarDNI();
-    void generarID();
-    void generarNumeroSeguimiento();
-    
-    friend class NodoPila;
-    friend class Pila;
-    friend class NodoCola;
-    friend class Cola;
-    friend class Gestor;
-    friend class Lista;
-    friend class NodoLista;
 
 };
 
